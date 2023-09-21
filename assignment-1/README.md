@@ -25,8 +25,7 @@ CREATE TABLE customer (
 	first_name VARCHAR ( 50 ) UNIQUE NOT NULL,
 	last_name VARCHAR ( 50 ) NOT NULL,
 	email VARCHAR ( 255 ) UNIQUE NOT NULL,
-	created_on TIMESTAMP NOT NULL,
-        last_login TIMESTAMP 
+	created_on TIMESTAMP NOT NULL
 );
 ```
 
@@ -37,4 +36,19 @@ On the SaaS application side, we will use [Google Sheets](https://developers.goo
 ## High-level Design
 
 ![](https://docs.google.com/drawings/d/e/2PACX-1vQTc_ZR7v72D6w7QgpX5wagxGeuram1C1doerXvnZkDQQJFsINQbIkd-L6tDbupe5icKPAXi5j44Df5/pub?w=960&h=720)
+
+## Use Cases
+1. Fetch data from Postgres using the below query and populate the data into a new sheet.
+
+### FROM
+```sql
+SELECT customer_id, first_name, last_name, email from customer;
+```
+### TO
+* Sheet Name: `customer`
+* Column Names: 
+
+| customer_id | first_name | last_name | email |
+| ----------- | ---------- | ----------| ----- | 
+ 
 
