@@ -36,5 +36,5 @@ On the SaaS application side, we will use [Google Sheets](https://developers.goo
 
 ## High-level Design
 
-
+![](https://docs.google.com/drawings/d/e/2PACX-1vQTc_ZR7v72D6w7QgpX5wagxGeuram1C1doerXvnZkDQQJFsINQbIkd-L6tDbupe5icKPAXi5j44Df5/pub?w=960&h=720)
 
