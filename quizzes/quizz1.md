@@ -19,7 +19,7 @@ class BloomFilter:
             index = int(digest, 16) % self.size
             self.bit_array[index] = 1
 
-     def lookup(self, element)"
+     def lookup(self, element):
           """FIXME
           """
           
