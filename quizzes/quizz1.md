@@ -18,6 +18,11 @@ class BloomFilter:
             digest = hashlib.sha1((self.salt + str(element) + str(i)).encode('utf-8')).hexdigest()
             index = int(digest, 16) % self.size
             self.bit_array[index] = 1
+
+     def lookup(self, element)"
+          """FIXME
+          """
+          
 ```
 
 ### Requirements
