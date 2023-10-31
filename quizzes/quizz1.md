@@ -1,4 +1,4 @@
-# Implement a BloomFilter to intercept SELECT and INSERT operations of [DuckDB](https://duckdb.org/docs/api/python/data_ingestion) to imporove performance.
+### Implement a BloomFilter to intercept SELECT and INSERT operations of [DuckDB](https://duckdb.org/docs/api/python/data_ingestion) to imporove performance.
 
 ```python
 import hashlib
@@ -18,15 +18,22 @@ class BloomFilter:
             self.bit_array[index] = 1
 ```
 
-### Requirement
+### Requirements
 
-* You can assume data comes from input.csv file and it has the following format in the file:
+* You can assume data comes from students.csv file and it has the following format in the file:
+```
 SJSU_ID,Name
 11111111,"John Smith"
+```
 
 ### Example:
-1. Your BloomFilter should return true and then let the query executes. 
-SELECT * FROM 'students.csv' WHERE SJSU_ID = '11111111'
+1. Your BloomFilter should return true and then let the query executes.
 
-2. Your BloomFilter should return false and then not let the query executes. 
+```sql
+SELECT * FROM 'students.csv' WHERE SJSU_ID = '11111111'
+```
+
+3. Your BloomFilter should return false and then not let the query executes. 
+```sql
 SELECT * FROM 'students.csv' WHERE SJSU_ID = '2222222222'
+```
