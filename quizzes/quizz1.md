@@ -1,6 +1,6 @@
 ### Quizz 1
 
-Implement a BloomFilter to intercept SELECT operation of [DuckDB](https://duckdb.org/docs/api/python/data_ingestion) to imporove performance.
+Implement a BloomFilter to intercept SELECT operation of [DuckDB](https://duckdb.org/docs/api/python/data_ingestion) to improve performance.
 
 ```python
 import hashlib
